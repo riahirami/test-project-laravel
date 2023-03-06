@@ -22,5 +22,10 @@ Route::get('/anypet', function () {
     return view('anypet');
 });
 
+Route::get('/user/{id}', function (string $id) {
+    return 'parameters '.$id;
+});
 
-
+Route::get('/id/{id}/name/{name}', function (string $name,string $id) {
+    return 'id: '.$id.' name: '.$name;
+});
